@@ -2,6 +2,9 @@
 
 La especificación se organiza ahora en guías por responsabilidad. El punto de entrada es el **[índice de documentación](docs/README.md)**.
 
+Para usarla con un agente de IA, consultar la skill
+[dotnet-ai-skills](SKILL.md), que selecciona las referencias según la tarea.
+
 | Área | Punto de entrada |
 | --- | --- |
 | Adopción del proyecto | [Plataforma, versiones, decisiones y ADR](docs/adopcion-del-proyecto.md) |

@@ -1,6 +1,10 @@
-# Guías técnicas para proyectos .NET
+# Referencias de .NET AI Skills
 
-Base reutilizable para APIs .NET 10 y sus clientes. La documentación se organiza por responsabilidad; cada regla tiene una guía propietaria. Las guías conservan los requisitos normativos y ejemplos de la especificación original.
+Referencias de la skill [dotnet-ai-skills](../SKILL.md) para APIs .NET 10 y sus
+clientes. Se organizan por responsabilidad; cada regla tiene una guía propietaria.
+Las guías conservan los requisitos normativos y ejemplos de la especificación
+original. El flujo de trabajo para agentes y la selección de referencias están
+en SKILL.md; este índice también permite consultar las guías directamente.
 
 ## Cómo utilizar estas guías
 
