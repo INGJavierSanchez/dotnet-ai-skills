@@ -1,0 +1,27 @@
+# Archivos locales de Windows y editores
+desktop.ini
+Thumbs.db
+.DS_Store
+.vs/
+.idea/
+
+# Archivos locales de herramientas
+.codex/
+
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.Local.json
+*.pfx
+*.p12
+*.key
+
+# Salidas y archivos temporales
+**/bin/
+**/obj/
+TestResults/
+*.log
+*.tmp
+*.bak
