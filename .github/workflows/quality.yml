@@ -1,0 +1,23 @@
+name: Quality
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate repository structure and links
+        shell: pwsh
+        run: ./scripts/validate-repository.ps1
+
+      - name: Check whitespace errors
+        shell: bash
+        run: git diff --check

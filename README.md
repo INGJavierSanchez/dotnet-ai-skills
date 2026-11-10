@@ -59,6 +59,20 @@ entrada carga referencias de forma progresiva: no hace falta adjuntar todas
 las guías en cada petición. La instalación no se realiza por clonar el repo;
 depende del registro de skills de la herramienta utilizada.
 
+### Comprobar la instalación
+
+Desde la raíz del repositorio, ejecuta:
+
+```powershell
+pwsh ./scripts/validate-repository.ps1
+```
+
+La comprobación valida la estructura mínima y los enlaces relativos de Markdown.
+No requiere restaurar paquetes ni conexión de red.
+
+Conserva `SKILL.md`, `README.md`, `agents/openai.yaml`, `docs/` y `scripts/` al
+copiar la skill a otra ubicación.
+
 ## Alcance
 
 En proyectos nuevos, completa la adopción antes de implementar decisiones que
@@ -69,6 +83,22 @@ convenciones se adoptan; una tarea pequeña no implica migrar todo el stack.
 Los agentes pueden implementar funcionalidades, revisar cumplimiento y preparar
 cambios usando estas referencias. Aplicar una skill no concede autorización
 para desplegar, modificar datos de producción o publicar código.
+
+## Compatibilidad
+
+La base normativa está escrita para .NET 10. Antes de aplicar reglas dependientes
+de plataforma, comprueba `TargetFramework`, el SDK, `Directory.Packages.props` y
+los paquetes relevantes del proyecto.
+
+| Proyecto | Tratamiento |
+| --- | --- |
+| .NET 10 | Aplicar la base directamente y fijar versiones en la adopción. |
+| .NET 8 o .NET 9 | Aplicar principios y contratos; adaptar APIs incompatibles y documentar la desviación. |
+| Otra versión o framework | No asumir compatibilidad: presentar el impacto y pedir confirmación antes de migrar. |
+
+Una diferencia de versión no autoriza actualizar el framework como parte de una
+tarea funcional. Registra una ADR cuando la adaptación cambie una convención,
+un contrato público o una garantía operativa.
 
 ## Áreas
 

@@ -15,6 +15,20 @@ en SKILL.md; este índice también permite consultar las guías directamente.
 
 Las guías de arquitectura definen responsabilidades y dependencias. Desarrollo establece convenciones; seguridad fija controles; operación define configuración y despliegue; calidad organiza verificaciones; interfaz define presentación. Las decisiones concretas del proyecto se completan en adopción, sin modificar la base reutilizable.
 
+## Rutas rápidas
+
+| Necesidad | Orden recomendado |
+| --- | --- |
+| Crear una API o funcionalidad nueva | [Adopción](adopcion-del-proyecto.md) → [fundamentos](arquitectura/fundamentos.md) → [Application/CQRS](arquitectura/application-cqrs.md) → [API HTTP](arquitectura/api-http.md) → [pruebas](calidad/pruebas.md). |
+| Revisar una funcionalidad existente | [fundamentos](arquitectura/fundamentos.md) → guía de la responsabilidad afectada → [lista de aceptación](calidad/lista-aceptacion.md). |
+| Cambiar contratos HTTP u OpenAPI | [API HTTP](arquitectura/api-http.md) → [respuestas](arquitectura/respuestas-api.md) → [errores](arquitectura/errores-http.md) → [mapeo](arquitectura/contratos-y-mapeo.md). |
+| Cambiar persistencia o migraciones | [persistencia](arquitectura/persistencia-y-consultas.md) → [Unit of Work](arquitectura/unit-of-work.md) → [migraciones](operacion/migraciones-inicializacion.md) → [pruebas](calidad/pruebas.md). |
+| Cambiar seguridad o multiempresa | [autenticación](seguridad/autenticacion-autorizacion.md) → [seguridad mínima](seguridad/seguridad-y-multiempresa.md) → [mensajes públicos](seguridad/mensajes-publicos.md). |
+| Preparar CI y operación | [integración continua](calidad/integracion-continua.md) → [configuración](operacion/configuracion.md) → [observabilidad](operacion/observabilidad.md) → [aceptación](calidad/lista-aceptacion.md). |
+
+La matriz no reemplaza las instrucciones locales ni la comprobación de versiones
+descrita en [README](../README.md#compatibilidad).
+
 ## Regla de mantenimiento
 
 Actualizar una regla en su guía propietaria y enlazarla desde las demás. La lista de aceptación resume requisitos y enlaza sus fuentes; no sustituye el texto normativo. Los fragmentos de código conservados son ejemplos y no equivalen a una aplicación compilada.

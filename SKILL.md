@@ -44,6 +44,25 @@ resolver una tarea pequeña.
 | Enviar notificaciones por correo | [Correo y Outbox](docs/arquitectura/correo-y-outbox.md) y [operación de correo](docs/operacion/entrega-correo.md). |
 | Modificar calendarios de los clientes Web o móvil | [Localización](docs/interfaz/localizacion-calendarios.md) y [tipos de fecha](docs/desarrollo/convenciones-codigo.md#tema-fechas-sin-componente-de-hora). |
 | Añadir pruebas, configurar CI o revisar cumplimiento | [Pruebas](docs/calidad/pruebas.md), [CI](docs/calidad/integracion-continua.md) y los apartados relevantes de [aceptación](docs/calidad/lista-aceptacion.md). |
+| Actualizar dependencias o cambiar de versión de .NET | [Adopción](docs/adopcion-del-proyecto.md), [fundamentos](docs/arquitectura/fundamentos.md) y [composición](docs/arquitectura/composicion-y-dependencias.md); comprobar `TargetFramework` y versiones centrales. |
+| Cambiar autenticación, sesión o aislamiento | [Autenticación](docs/seguridad/autenticacion-autorizacion.md), [seguridad y multiempresa](docs/seguridad/seguridad-y-multiempresa.md), [mensajes públicos](docs/seguridad/mensajes-publicos.md) y [respuestas](docs/arquitectura/respuestas-api.md). |
+| Cambiar OpenAPI o contratos HTTP | [API HTTP](docs/arquitectura/api-http.md), [respuestas](docs/arquitectura/respuestas-api.md), [errores](docs/arquitectura/errores-http.md) y [mapeo](docs/arquitectura/contratos-y-mapeo.md). |
+| Revisar rendimiento o consultas | [Persistencia](docs/arquitectura/persistencia-y-consultas.md), [observabilidad](docs/operacion/observabilidad.md) y [pruebas](docs/calidad/pruebas.md). |
+| Cambiar CI, despliegue o telemetría | [CI](docs/calidad/integracion-continua.md), [observabilidad](docs/operacion/observabilidad.md), [configuración](docs/operacion/configuracion.md) y [migraciones](docs/operacion/migraciones-inicializacion.md). |
+
+## Flujo de trabajo y entrega
+
+1. **Descubrir:** lee instrucciones locales, identifica `TargetFramework`, SDK,
+   paquetes, proveedor de datos y archivos afectados.
+2. **Decidir:** distingue convenciones adoptadas, desviaciones y decisiones
+   pendientes; no actualices dependencias por inferencia.
+3. **Planificar:** selecciona las referencias aplicables y resume el plan antes
+   de editar cuando el cambio abarque varias capas.
+4. **Implementar o revisar:** en una revisión no modifiques archivos salvo que se
+   solicite explícitamente.
+5. **Verificar:** ejecuta las pruebas y comprobaciones que permita el proyecto;
+   separa resultados ejecutados de pendientes.
+6. **Entregar:** informa archivos modificados, evidencia, riesgos y supuestos.
 
 ## Aplicar la base técnica
 
